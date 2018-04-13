@@ -1,8 +1,6 @@
 sem页面数据获取 - 接口文档
 
-> 前缀可以是 xiaoying.net | www.xiao-ying.net | eggelite.com
-
-> 统一返回数据格式:
+> 返回数据格式:
 {
 	code:200 ,	# 请求成功
 	status:bool,# true=正常 | false=异常
@@ -18,7 +16,7 @@ sem页面数据获取 - 接口文档
 		m (必选 int) 主分类ID
         r (必选 string) 查询范围(表名)
     例:
-    	xiaoying.net/sem_search?m=6&r=teacher
+    	test.com/sem_search?m=6&r=teacher
     返回结果:
     {
 	    "code": 200,
@@ -51,7 +49,7 @@ sem页面数据获取 - 接口文档
 #### 错误示例
 
 	请求接口:
-		xiaoying.net/sem_search
+		test.com/sem_search
 	返回结果:
 	{
 	    "code": 200,
