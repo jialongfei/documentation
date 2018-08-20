@@ -103,6 +103,44 @@
 		    "msg": "错误信息"
 		}
 
+#### 更新用户信息
+	路由: xy/call/stu/update
+	所需参数:
+		ui     必须 用户编号
+		phone  必须 手机号码
+	返回数据:
+	成功:
+		{
+		    "status": true,
+		    "res": {
+		        "name": "张三",
+		        "phone": "15988805856",
+		        "code": "7238",
+		        "call_num": 5,
+		        "share_num": 0,
+		        "share_status": 0,
+		        "create_time": 1534413270,
+		        "status": 1,
+		        "id": "13"
+		    }
+		}
+		字段说明
+		// name = 姓名
+		// phone = 手机号码
+		// code = 验证码
+		// call_num = 剩余call值
+		// share_num = 分享次数
+		// share_status = 分享状态
+		// create_time = 创建时间
+		// status = 学员状态 1=正常 0=异常
+		// id = 用户编号
+	注意: 这里返回的数据需要保存在客户端,以便用户发起打call或分享请求的时候传递用户信息
+	失败:
+		{
+		    "status": false,
+		    "msg": "错误信息"
+		}
+
 #### 创建打call记录
 
 	路由: xy/call/create
